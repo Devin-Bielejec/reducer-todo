@@ -62,6 +62,14 @@ You get to choose how you want to set up your components. Please don't just do t
 - Using the `reducer` hook, set up state in your component. Think about what you'll need in order to use the reducer hook, and think about what it returns.
 - Now render your list of todos from your reducer in your app
 
+Plan: (What do all the components need)
+
+App
+Display [state, for items in the array]
+-Item [state, toggle complete or not]
+Form []
+-Add To Do Button [state, add to array]
+-Clear Completed Button [state, completed tasks]
 ### STEP 3 - Adding todos
 
 - Build a form to add todos to your list
