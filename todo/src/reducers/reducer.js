@@ -9,12 +9,11 @@ const initialState = {
   }
 
 //Actions - Add, clear
-const reducer = (state, action) => {
+const toDosReducer = (state, action) => {
     switch(action.type) {
         case "add":
-            return {  }
+            return { toDos: [...initialState.toDos, action.payload] };
     }
-    return state;
 }
 
-export { initialState, reducer };
+export { initialState, toDosReducer };

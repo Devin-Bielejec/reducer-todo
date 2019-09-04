@@ -70,6 +70,7 @@ Display [state, for items in the array]
 Form []
 -Add To Do Button [state, add to array]
 -Clear Completed Button [state, completed tasks]
+
 ### STEP 3 - Adding todos
 
 - Build a form to add todos to your list
