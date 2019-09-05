@@ -73,9 +73,9 @@ Form []
 
 ### STEP 3 - Adding todos
 
-- Build a form to add todos to your list
-- Build a function that will dispatch an action to add a new todo
-- Write the `case` in your reducer for adding a todo (You can create a unique id with `new Date()`)
+[X] Build a form to add todos to your list
+[X] Build a function that will dispatch an action to add a new todo
+[X] Write the `case` in your reducer for adding a todo (You can create a unique id with `new Date()`)
 
 ### STEP 4 - Toggle the completed field
 

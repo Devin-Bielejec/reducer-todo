@@ -13,6 +13,11 @@ const toDosReducer = (state = initialState, action) => {
     switch(action.type) {
         case "add":
             return { toDos: [...state.toDos, action.payload] };
+        case "toggle":
+            console.log("toggle");
+            let filteredToDos = state.toDos.filter( item => item.id !== action.payload.id);
+            
+            return { toDos: [...filteredToDos, action.payload]}
     }
 }
 
