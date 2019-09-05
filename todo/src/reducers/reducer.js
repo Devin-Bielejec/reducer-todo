@@ -9,10 +9,10 @@ const initialState = {
   }
 
 //Actions - Add, clear
-const toDosReducer = (state, action) => {
+const toDosReducer = (state = initialState, action) => {
     switch(action.type) {
         case "add":
-            return { toDos: [...initialState.toDos, action.payload] };
+            return { toDos: [...state.toDos, action.payload] };
     }
 }
 
