@@ -14,13 +14,13 @@ const toDosReducer = (state = initialState, action) => {
         case "add":
             return { toDos: [...state.toDos, action.payload] };
         case "toggle":
-            console.log("toggle");
-            //state without the current toggled one
-            let filteredToDos = state.toDos.filter( item => item.id !== action.payload.id);
-            console.log(action.payload);
+            //Get index of toggled Item in current state
+            let toggledItem = state.toDos.filter( item => item.id === action.payload.id)[0];
+
             action.payload.completed ? action.payload.completed = false : action.payload.completed = true;
-            console.log(action.payload);
-            return { toDos: [...filteredToDos, action.payload]}
+            let newState = [...state.toDos];
+            newState.splice(newState.indexOf(toggledItem), 1, action.payload);
+            return { toDos: newState}
     }
 }
 
