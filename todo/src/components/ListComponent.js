@@ -1,12 +1,13 @@
-import React from "react";
-import { initialState } from "../reducers/reducer";
+import React, { useContext } from "react";
 import ToDoItemComponent from "./ToDoItemComponent";
+import StateContext from "../contexts/StateContext";
 
 const ListComponent = () => {
-    console.log(initialState);
+    const contextValue = useContext(StateContext);
+    console.log(contextValue);
     return(
         <ul className="todo">
-            {initialState.toDos.map(task => <ToDoItemComponent task={task}/>)}
+            {contextValue.state.toDos.map(task => <ToDoItemComponent task={task}/>)}
         </ul>
     )
 }

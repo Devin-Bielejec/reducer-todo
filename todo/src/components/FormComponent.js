@@ -1,13 +1,14 @@
-import React, { useReducer }from "react";
+import React, { useReducer, useContext }from "react";
 import { initialState, toDosReducer } from "../reducers/reducer";
+import StateContext from "../contexts/StateContext";
 
 const FormComponent = () => {
-    const [state, dispatch ] = useReducer(toDosReducer, initialState);
+    const contextValue = useContext(StateContext);
+    console.log(contextValue);
     const handleSubmit = e => {
         e.preventDefault();
         console.log("hi");
-        dispatch({ type: "add", payload: {item: "Tacos", completed: false, id: Date.now()}})
-        console.log(state);
+        contextValue.dispatch({ type: "add", payload: {item: "Tacos", completed: false, id: Date.now()}})
     }
     
     return(
