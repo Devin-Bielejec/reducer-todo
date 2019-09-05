@@ -12,6 +12,7 @@ import { initialState, toDosReducer } from "./reducers/reducer";
 
 function App() {
   const [ state, dispatch ] = useReducer(toDosReducer, initialState);
+  console.log("App", state);
   return (
     <StateContext.Provider value={{state, dispatch}}>
       <div className="App">

@@ -3,8 +3,6 @@ import StateContext from "../contexts/StateContext";
 
 const ToDoItemComponent = (props) => {
     const contextValue = useContext(StateContext);
-    console.log("ToDoItemCompoment", contextValue);
-    console.log(props);
     const toggleItem = () => {
         contextValue.dispatch({type: "toggle", payload: props.task})
     }

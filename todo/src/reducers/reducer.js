@@ -21,6 +21,9 @@ const toDosReducer = (state = initialState, action) => {
             let newState = [...state.toDos];
             newState.splice(newState.indexOf(toggledItem), 1, action.payload);
             return { toDos: newState}
+        case "clear":
+            console.log([...state.toDos.filter( item => !item.completed)])
+            return { toDos: [...state.toDos.filter( item => !item.completed)]}
     }
 }
 

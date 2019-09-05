@@ -4,7 +4,7 @@ import StateContext from "../contexts/StateContext";
 
 const ListComponent = () => {
     const contextValue = useContext(StateContext);
-    console.log("list component", contextValue);
+    console.log("we are here", contextValue);
     return(
         <ul className="todo">
             {contextValue.state.toDos.map(task => <ToDoItemComponent task={task}/>)}
