@@ -15,8 +15,11 @@ const toDosReducer = (state = initialState, action) => {
             return { toDos: [...state.toDos, action.payload] };
         case "toggle":
             console.log("toggle");
+            //state without the current toggled one
             let filteredToDos = state.toDos.filter( item => item.id !== action.payload.id);
-            
+            console.log(action.payload);
+            action.payload.completed ? action.payload.completed = false : action.payload.completed = true;
+            console.log(action.payload);
             return { toDos: [...filteredToDos, action.payload]}
     }
 }
